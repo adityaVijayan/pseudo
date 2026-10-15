@@ -1,0 +1,65 @@
+&CONTROL
+    calculation = 'vc-relax'
+    verbosity = 'high'
+    prefix = 'ti3mo_c3'
+    outdir = './out/'
+    pseudo_dir = '/home/adi/dft/mix-sssp-prec-pbesol-lib-v2/library/'
+    etot_conv_thr = 4.0e-6
+    forc_conv_thr = 1.0e-3
+/
+
+&SYSTEM
+    ibrav = 4
+    celldm(1) = 9.6297293764
+    celldm(3) = 1.631050283
+    nat = 16
+    ntyp = 3
+    nspin = 2
+    ecutwfc = 50
+    ecutrho = 500
+    occupations = 'smearing'
+    smearing = 'mp'
+    degauss = 0.01
+    starting_magnetization(1) = 0.0
+    starting_magnetization(2) = 0.0
+    starting_magnetization(3) = 0.0
+
+/
+
+&ELECTRONS
+    conv_thr = 1.0e-6
+    mixing_beta = 0.1
+/
+
+&IONS
+/
+
+&CELL
+    cell_dofree = 'all'
+/
+
+ATOMIC_SPECIES
+    Ni 58.6934 Ni.nc.pbesol.z_18.oncvpsp4.spms.v1.upf
+    Ti 47.8670 Ti.us.pbesol.z_12.uspp.gbrv.v1.4.upf
+    Mo 95.9600 Mo.paw.pbesol.z_14.atompaw.jth.v1.1-std.upf
+
+ATOMIC_POSITIONS (alat)
+    Ti               0.33333333  0.66666667  0.25000000
+    Ti               0.66666667  0.33333333  0.75000000
+    Mo               0.00000000  0.00000000  0.00000000
+    Ti               0.00000000  0.00000000  0.50000000
+    Ni               0.50000000  0.00000000  0.50000000
+    Ni               0.00000000  0.50000000  0.00000000
+    Ni               0.65659000  0.82829500  0.75000000
+    Ni               0.82829500  0.65659000  0.25000000
+    Ni               0.82829500  0.17170500  0.25000000
+    Ni               0.17170500  0.82829500  0.75000000
+    Ni               0.17170500  0.34341000  0.75000000
+    Ni               0.34341000  0.17170500  0.25000000
+    Ni               0.50000000  0.50000000  0.50000000
+    Ni               0.50000000  0.50000000  0.00000000
+    Ni               0.50000000  0.00000000  0.00000000
+    Ni               0.00000000  0.50000000  0.50000000
+
+K_POINTS (automatic)
+    6 6 3 0 0 0
